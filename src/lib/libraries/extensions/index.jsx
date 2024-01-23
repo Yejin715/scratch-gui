@@ -46,6 +46,11 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import icobotIconURL from './icobot/icobot.png';
+import icobotInsetIconURL from './icobot/icobot-small.png';
+import icobotConnectionIconURL from './icobot/icobot-illustration.png';
+import icobotConnectionSmallIconURL from './icobot/icobot-small.png';
+
 export default [
     {
         name: (
@@ -317,5 +322,34 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/vernier'
+    },
+    {
+        name: 'i-COBOT',
+        extensionId: 'icobot',
+        collaborator: 'Ai Control',
+        iconURL: icobotIconURL,
+        insetIconURL: icobotInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Play with i-COBOT!"
+                description="Description for the 'i-COBOT' extension"
+                id="gui.extension.icobot.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: icobotConnectionIconURL,
+        connectionSmallIconURL: icobotConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their i-COBOT."
+                id="gui.extension.icobot.connectingMessage"
+            />
+        ),
+        helpLink: 'https://aicontrol.ai'
     }
 ];
